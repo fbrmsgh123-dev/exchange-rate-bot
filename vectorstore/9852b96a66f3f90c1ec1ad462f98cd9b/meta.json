@@ -1,0 +1,127 @@
+{
+  "doc_hash": "9852b96a66f3f90c1ec1ad462f98cd9b",
+  "embedding_model": "text-embedding-3-large",
+  "dimension": 3072,
+  "chunk_count": 11,
+  "created_at": "2026-09-01T07:17:28+00:00",
+  "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/",
+  "final_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/",
+  "frame_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/~/+/",
+  "content_hash": "77906b60df703ccd372b576d70adcf6ea9567cefd1bfbf5d9bb041dc86141bc6",
+  "crawled_at": "2026-09-01T07:17:27+00:00",
+  "block_count": 13,
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "chunks": [
+    {
+      "chunk_id": 0,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "💱 일자별 환율 현황 USD · EUR · JPY · CNY 실시간 환율과 30일 추이 마지막 갱신 · 09/01 16:15",
+      "block_id": 0,
+      "section": "",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 1,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "🇺🇸 미국 달러 1 USD 1,373.40 ▲ 3.90 (+0.28%) 갱신 09/01 16:15 · 2분 전",
+      "block_id": 1,
+      "section": "",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 2,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "🇪🇺 유로 1 EUR 1,593.56 ▲ 2.41 (+0.15%) 갱신 09/01 16:15 · 2분 전",
+      "block_id": 2,
+      "section": "",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 3,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "🇯🇵 일본 옌 100 JPY 858.59 ▲ 1.45 (+0.17%) 갱신 09/01 16:15 · 2분 전",
+      "block_id": 3,
+      "section": "",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 4,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "🇨🇳 중국 위안 1 CNY 204.32 ▲ 0.48 (+0.24%) 갱신 09/01 16:15 · 2분 전",
+      "block_id": 4,
+      "section": "",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 5,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "점선은 실제 예측이 아니라 최근 14일 추세를 선형으로 연장한 참고용 추정치입니다. 환율은 등락을 예측하기 어려우니 참고만 하세요.",
+      "block_id": 6,
+      "section": "📈 30일 추이",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 6,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "관련 뉴스 (네이버 금융 \"환율\" 뉴스 발췌 · AI 요약 아님) 종부세 개편 한 달 만에 후퇴...비거주 공제 12억 유지 서울경제 · 2026-09-01 14:38 정부가 비거주 1주택자의 종합부동산세 기본공제를 현행 공시가격 12억 원으로 유지하기로 했다. 지난달 세제 개편안을 통해 공제액을 9억 원으로 ... 베선트 \"日건전재정·금리인상 시장에 명확히 제시를\" 연합뉴스 · 2026-09-01 11:45 일은총재·日재무상 연쇄 회담서 강조…日 \"강한 경제·재정 지속성 양립\" 日 10년 국채금리 3% 육박…30년 만에 최고 조성미 특파원 = 스콧 ... K자 양극화 대응 117조…증액 절반 이상 지방에 [2027년 예산안] 서울경제 · 2026-09-01 11:43 정부가 경기 회복의 과실이 일부 계층과 지역에 집중되고 취약층은 뒤처지는 이른바 ‘K자형 양극화’를 완화하기 위해 내년 117조 원 넘는 재정을...",
+      "block_id": 8,
+      "section": "📰 특이사항",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 7,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "미국 달러 평소와 유사한 흐름",
+      "block_id": 9,
+      "section": "📰 특이사항",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 8,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "유로 평소와 유사한 흐름",
+      "block_id": 10,
+      "section": "📰 특이사항",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 9,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "일본 옌 평소와 유사한 흐름",
+      "block_id": 11,
+      "section": "📰 특이사항",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    },
+    {
+      "chunk_id": 10,
+      "source_file": "exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app",
+      "page": 0,
+      "text": "중국 위안 평소와 유사한 흐름",
+      "block_id": 12,
+      "section": "📰 특이사항",
+      "block_type": "paragraph",
+      "source_url": "https://exchange-rate-u7uio5wcnmmukgaqucpkml.streamlit.app/"
+    }
+  ]
+}
