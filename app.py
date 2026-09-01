@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import dataclasses
 import logging
+import os
 
 import streamlit as st
 
@@ -30,6 +31,25 @@ DISCLAIMER = (
 )
 
 st.set_page_config(page_title="환율 페이지 Q&A", page_icon="💱", layout="centered")
+
+
+def _bridge_secrets() -> None:
+    """`st.secrets` 를 환경변수로 옮긴다.
+
+    `config.py` 는 `os.environ` 만 읽는다(다른 모듈이 Streamlit 에 의존하지 않게
+    하려는 설계). Streamlit Cloud 에는 `.env` 가 없으므로 여기서 다리를 놓는다.
+    이미 환경변수가 있으면 건드리지 않는다 — 로컬 `.env` 가 우선이다.
+    """
+    try:
+        secrets = st.secrets
+    except Exception:  # secrets.toml 이 없으면 접근 자체가 실패할 수 있다
+        return
+    for key, value in secrets.items():
+        if isinstance(value, str) and key not in os.environ:
+            os.environ[key] = value
+
+
+_bridge_secrets()
 
 
 # --------------------------------------------------------------------------- #
@@ -151,12 +171,22 @@ def main() -> None:
             help="PRD F5.2 — 늘리면 근거가 많아지고 토큰도 늘어납니다",
         )
         st.caption(
-            f"임계값 {cfg.similarity_threshold} · 컨텍스트 상한 "
-            f"{cfg.max_context_tokens} tokens · 이력 최근 {cfg.max_history_turns}턴"
+            f"검색 {cfg.retrieval_mode} · 임계값 {cfg.similarity_threshold} · "
+            f"컨텍스트 상한 {cfg.max_context_tokens} tokens · "
+            f"이력 최근 {cfg.max_history_turns}턴"
         )
 
         st.divider()
-        refresh_clicked = st.button("페이지 새로고침", width="stretch", help="PRD F4.4")
+        refresh_clicked = (
+            st.button("페이지 새로고침", width="stretch", help="PRD F4.4")
+            if cfg.enable_crawl
+            else False
+        )
+        if not cfg.enable_crawl:
+            st.caption(
+                "읽기 전용 배포입니다. 인덱스는 외부 작업(GitHub Actions 등)이 "
+                "갱신합니다."
+            )
         reset_clicked = st.button("대화 초기화", width="stretch", help="PRD F7.3")
 
         st.divider()
@@ -186,7 +216,13 @@ def main() -> None:
             st.info("잠시 후 새로고침하거나, 사이드바에서 소스 URL을 확인하세요.")
             st.stop()
         except VectorStoreError as exc:
-            st.error(f"인덱스 오류: {exc}")
+            st.error(f"인덱스를 찾을 수 없습니다: {exc}")
+            if not cfg.enable_crawl:
+                st.info(
+                    "이 배포는 미리 만들어 둔 인덱스를 읽기만 합니다"
+                    "(`ENABLE_CRAWL=false`). `vectorstore/` 가 배포본에 포함되어야 "
+                    "합니다 — 자세한 절차는 DEPLOY.md 참조."
+                )
             st.stop()
         st.session_state["index"] = index
         st.session_state["startup_warning"] = warning
